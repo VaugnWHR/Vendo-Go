@@ -1,0 +1,62 @@
+<html>
+<head>
+ <title>Vendo-Go | Login</title>
+   <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2514/2514680.png" sizes="16x16">
+<link rel="stylesheet" href="css/reg.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   <script src="file://C:\Users\juvau\OneDrive\Documents\School\M.A.D\projects\script\java.js"></script>
+ </head>
+<body>
+<div class="container">
+    <h1> Vendo-Go Portal</h1>
+</div>
+<form>
+ <input type="text" name="name" id="name" placeholder="Username">
+
+
+<br>
+<br>
+ <input type="password" name="psw" id="psw" placeholder="Password">
+<br>
+<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me 
+<br>
+
+<button onClick="login();" type="button" class="loginbtn">Login</button>
+
+<div class="container signin">
+    <p>Don't have an account? <a href="./index.html">Sign Up</a>.</p>
+  </div>
+</form>
+<script>
+
+function login(){
+var name= document.getElementById("name").value;
+var password= document.getElementById("psw").value;
+if (password && name){
+	var users= JSON.parse(sessionStorage.getItem("user")); 
+	if (users){
+		users.forEach(function(user){
+			user=JSON.parse(user);
+			if (password == user.password && name == user.Name){
+				sessionStorage.setItem("login_user",JSON.stringify(user))
+				sessionStorage.setItem("login_name", name)
+				window.location.replace('homepage.html');
+				
+			}else{
+				alert("Sorry Incorrect Credentials");
+			}
+		});
+	}
+}
+else{
+		alert("Field cant be left empty");
+	}
+	
+	
+		
+}
+</script>
+</body>
+</html>

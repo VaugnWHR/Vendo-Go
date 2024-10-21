@@ -1,0 +1,61 @@
+/*Teara Griffiths*/
+.about-section{ /*styles the entire form*/
+  width: 80%; /*adjust the width of the form based on your choice*/
+background:#999999; /*the background color of the inside of the form*/
+  padding: 40px 0;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 90px;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; /* The box-shadow property enables users cast a drop shadow from the frame of the form.*/
+border-radius: 30px; /*creates a rounder border for the form*/
+border-left: 50px solid #3e2093; /*gives the border of the form a color*/
+border-right: 50px solid #3e2093; /*gives the border of the form a color*/
+
+
+}
+.inner-width{ /*styles the inner section of the form where the information of the about us page is typed in*/
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 0 20px;
+  margin: auto;
+}
+.about-section h1{ /*styles the header in the about sectiion of the form*/
+  text-align: center;
+}
+.border{ /*this style the border/line under the h1 */
+  width: 100px; /*this adjust the width of border/line under the h1 */
+  height: 3px; /*this adjust the height of border/line under the h1 */
+  background: #3e2093; /*this givesthe border/line under the h1 a color*/
+  margin: 40px auto; /*margin is the transparent space defined outside the border of the element which is used to clear out 
+						the space around the HTML elements */
+}
+.about-section-row{/* styles the row created with the form*/
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-section-col{/* styles the columns created within the row created in the form*/
+  flex: 50%;
+}
+.about{
+  padding-right: 30px; /*The padding-right sets the width of the padding area on the right of the form. */
+}
+.about p{ /* styles the paragraphs within the form. */
+  text-align: justify; /*align the text with the form*/
+  margin-bottom: 20px; /* margin botton sets the margin space required on the bottom of the form*/
+  color: white; /*The color of the text within the form. */
+  font-size: 17px; /*The size of the text within the form. */
+}
+
+
+@media screen and (max-width:700px) {/*@media is used in media queries to apply different styles for different media types/devices.*/
+  .about-section-col{
+    flex: 100%;
+    margin: 10px 0;
+  }
+  .about,.skills{
+    padding: 0;
+  }
+  .about{ /*align the text within the form as center*/
+    text-align: center;
+  }
+}

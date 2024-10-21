@@ -1,0 +1,91 @@
+/*Teara Griffiths*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center; /*adjust the alignment of the header*/
+    font-size: 32px; /* adjust the font size of the header of the content*/
+    padding-top: 20px;
+    font-weight: 900px; /*how bold the h1 should be*/
+}
+p{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(80, 77, 77); /*The color of the words types using the <p> tag*/
+    font-size: 20px;
+}
+.row_left_side{/*this is what the form of the page is identified as*/
+    background-color: #3e2093;/*this is the background color of the form*/
+    color: #eee;
+    width: 830px; /*this is the width of the form meaing the wide range of it or its extent*/
+    padding: 30px;
+    border-radius: 20px;
+    height: 420px; /*this is the heightof the form*/
+    position: relative;
+	top: 4px; /* The top CSS property participates in specifying the vertical position of the positioning of the form*/
+    left: 250px; /* The left CSS property participates in specifying the horizontal position of the positioning of the form*/
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; /* The box-shadow property enables users cast a drop shadow from the frame of the form.*/
+}
+.row_left_side h2{
+    font-size: 28px;
+    color: #fff;
+}
+.row_left_side p{ /*styles the paragraphs or phrases types using the <p> tag within the form*/
+    text-align: center;
+    color: rgb(175, 175, 175);
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.row_left_side a{ 
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.row_left_side i{
+    display: flex;
+    padding: 30px 0;
+    color: #fa949d;;
+}
+.row_left_side i span{
+    margin-left: 20px;
+    color: #fff;
+}
+.social_icon{ /*styles fa icons within the form*/
+    display: flex;
+    position: absolute;
+    bottom: 18px;
+    width: 200px;
+    justify-content: space-between;
+}
+.social_icon i{  /*styles fa icons within the form*/
+    width: 40px; 
+    height: 40px;
+    text-align: center;
+    padding: 12px 10px 10px 13px;
+    color: #fff;
+}
+.social_icon i:hover{ /*styles fa icons within the form*/
+    border-radius: 20px;
+    background-color: #fa949d; /*the color of the fa icons when users hover over them*/
+    color: #fff;
+}
+
+.right2{ /*adjust the size and position of the column created in the html*/
+		height:auto;
+		width:30%;
+		float:left;
+}
+.middle2{ /*adjust the size and position of the column created in the html*/
+		height:auto;
+		width:30%;
+		float:left;
+}
+.center2{ /*adjust the size and position of the column created in the html*/
+		height:300px%;
+		width:30%;
+		float:left;
+}
+

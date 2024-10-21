@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2514/2514680.png" sizes="16x16">
+  <title>Online Vending Machine</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+          <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"> </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <audio id="sound" src="http://codeskulptor-demos.commondatastorage.googleapis.com/pang/pop.mp3"></audio>
+<audio id="sound1" src="http://codeskulptor-demos.commondatastorage.googleapis.com/pang/pop.mp3"></audio>
+<audio id="sound2" src="http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/pause.wav"></audio>
+   <script src="script\java.js"></script>
+  
+</head>
+<body>
+
+  <div id="pg2" data-role="page" data-theme="a">
+   <div>
+      <button class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" onclick="back();">No text</button>
+    </div>
+    <div id="header" data-role="header">
+      <img src="https://cdn-icons-png.flaticon.com/512/2514/2514680.png" alt="v.m" style="left:-100%" height="50px" width="55px">
+      Vendo-GO
+
+    </div>
+    <div id="titlespc">
+      <form id="title">
+        <h3> Vending Machine</h3>
+      </form>
+    </div>
+    <form>
+       <input id="filter-for-listview" data-type="search" placeholder="Type to search...">
+    </form>
+
+    <ul data-role="listview" id="list" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+          <li><a href="#pg2a"><img src="https://cdn-icons-png.flaticon.com/512/1261/1261160.png" height="55px" width="60px">Snacks</a></li>
+          <li><a href="#pg2b"><img src="https://cdn-icons-png.flaticon.com/512/4329/4329542.png" height="55px" width="60px">Beverages</a></li>
+    </ul>
+    <br />
+    <br />
+    <br />
+    <div style="align-item:center; display:flex; justify-content:center; height:100px; ">
+      <input type="submit" style="position:absolute; width:200px; height:100px; " class="ui-btn ui-btn-b ui-btn-inline" value="Finish Selection" onclick="cart(); cart1()">
+    </div>
+  </div>
+
+  <div data-role="page" id="pg2a" data-theme="a">
+    <div>
+      <a href="#pg2" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">No text</a>
+    </div>
+    <div data-role="header" id="header">
+      Snack Items
+    </div>
+    <form>
+      <input id="filter-for-gridview" data-type="search" placeholder="Type to search...">
+    </form>
+    <div id="grid" data-inset="true" data-filter="true" data-input="#filter-for-gridview" class="ui-grid-b">
+
+      <div class="ui-block-a">
+        <div id="B.C" name="B.C" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://loshusansupermarket.com/product_images/d/547/St_Marys_Banana_Chips_Original_30g_tagged__69947_zoom.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          St. Mary's Banana Chips
+          <input type="button" id="BCB" value="Add" onclick=" BC();">
+        </div>
+      </div>
+
+      <div class="ui-block-b">
+        <div id="L.O" name="L.O" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://m.media-amazon.com/images/I/813axPlVxBL.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Lays Originals
+          <input type="button" value="Add" onclick="LO();">
+        </div>
+      </div>
+
+      <div class="ui-block-c">
+        <div id="P" name="P" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://www.pringles.com/content/global/pringles/en_CCE/pages/home/jcr:content/gridSystem/par/Copy%20of%20Copy%20of%20feature/slideData/jcr:content/par/inuitgrid/par/inuitgrid_975246484/par/responsiveimage.img.png/1639036153292.png'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Pringles
+          <input type="button" value="Add" onclick=" PR();">
+        </div>
+      </div>
+    </div>
+
+    <div id="list" data-inset="true" data-filter="true" data-input="#filter-for-gridview" class="ui-grid-b">
+      <div class="ui-block-a">
+        <div id="C.S" name="C.S" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://cdn.shopify.com/s/files/1/0549/9184/7672/products/FQ6A1563_1200x1200.png?v=1635800353'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Cheese Sticks
+          <input type="button" value="Add" onclick=" CS();">
+        </div>
+      </div>
+
+      <div class="ui-block-b">
+        <div id="R.B" name="R.B" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://m.media-amazon.com/images/I/61AkYjYdBXL.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Raisin Bun
+          <input type="button" value="Add" onclick=" RB();">
+        </div>
+      </div>
+
+      <div class="ui-block-c">
+        <div id="S.B" name="S.B" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://m.media-amazon.com/images/I/71cNqac4ekL.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Sherley Buiscet
+          <input type="button" value="Add" onclick=" SB();">
+        </div>
+      </div>
+    </div>
+
+    <div id="list" data-inset="true" data-filter="true" data-input="#filter-for-gridview" class="ui-grid-b">
+      <div class="ui-block-a">
+        <div id="R.H" name="R.H" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://jadeals.com/wp-content/uploads/Herrs-Red-Hot-Potato-Chips.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Red Hot
+          <input type="button" value="Add" onclick=" RH();">
+        </div>
+      </div>
+
+      <div class="ui-block-b">
+        <div id="D" name="D" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81o6lBz0VlL.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Doritios
+          <input type="button" value="Add" onclick=" D();">
+        </div>
+      </div>
+
+      <div class="ui-block-c">
+        <div id="R" name="R" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://m.media-amazon.com/images/I/81Aak49pu4L.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Ruffles
+          <input type="button" value="Add" onclick=" R();">
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /grid-c -->
+
+  <div data-role="page" id="pg2b">
+    <div>
+      <a href="#pg2" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">No text</a>
+    </div>
+    <div data-role="header" id="header">
+      Beverage Items
+    </div>
+    <form>
+      <input id="filter-for-gridview2" data-type="search" placeholder="Type to search...">
+    </form>
+    <div id="grid" data-inset="true" data-filter="true" data-input="#filter-for-gridview2" class="ui-grid-b">
+
+      <div class="ui-block-a">
+        <div id="W" name="water" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://loshusansupermarket.com/product_images/j/544/Wata_1L_tagged__21580_zoom.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Water
+          <input type="button" id="WB" value="Add" onclick=" W();">
+        </div>
+      </div>
+
+      <div class="ui-block-b">
+        <div id="P" name="pepsi" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://www.pepsi.com/en-us/uploads/images/twil-can.png'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Pepsi
+          <input type="button" value="Add" onclick=" P();">
+        </div>
+      </div>
+
+      <div class="ui-block-c">
+        <div id="CW" name="cranwater" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://i0.wp.com/aevionfoodstore.com/wp-content/uploads/2021/07/CranBerry.jpg?fit=300%2C300'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          OceanSpray Cran Water
+          <input type="button" value="Add" onclick=" CW();">
+        </div>
+      </div>
+    </div>
+
+    <div id="list" data-inset="true" data-filter="true" data-input="#filter-for-gridview2" class="ui-grid-b">
+      <div class="ui-block-a">
+        <div id="OJ" name="orangejuice" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://www.tru-juice.com/wp-content/uploads/2018/12/Chilled-orange-juice-150x150@2x.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Orange Juice
+          <input type="button" value="Add" onclick=" OJ();">
+        </div>
+      </div>
+
+      <div class="ui-block-b">
+        <div id="PP" name="peapunch" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://loshusansupermarket.com/product_images/n/652/Nestle_Peanut_Punch_200ml_tagged__49665_zoom.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Peanut Punch
+          <input type="button" value="Add" onclick=" PP();">
+        </div>
+      </div>
+
+      <div class="ui-block-c">
+        <div id="FP" name="frupunch" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://loshusansupermarket.com/product_images/d/112/Juciful_Fruit_Punch_450ml_tagged__38593_zoom.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Fruit Punch
+          <input type="button" value="Add" onclick=" FP();">
+        </div>
+      </div>
+    </div>
+
+    <div id="list" data-inset="true" data-filter="true" data-input="#filter-for-gridview2" class="ui-grid-b">
+      <div class="ui-block-a">
+        <div id="CM" name="cowmilk" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://www.seprod.com/wp-content/uploads/2022/08/serge-island-uht-milk-250-v2_jpg.png'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Cow's Milk
+          <input type="button" value="Add" onclick=" CM();">
+        </div>
+      </div>
+
+      <div class="ui-block-b">
+        <div id="C" name="cola" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://jadeals.com/wp-content/uploads/Coca-Cola-Carbonated-Beverage-1.jpg'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Coco Cola
+          <input type="button" value="Add" onclick=" C();">
+        </div>
+      </div>
+
+      <div class="ui-block-c">
+        <div id="S" name="sprite" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background-image: url('https://target.scene7.com/is/image/Target/GUEST_7c23b7bd-d895-4b43-9ce8-3b21b5e5f3d5'); background-position: top left, top right;
+  background-size: cover, 100% auto;">
+          Sprite
+          <input type="button" value="Add" onclick=" S();">
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /grid-c -->
+  </div>
+
+  <div data-role="page" id="pg3">
+    <div data-role="header" id="header">
+
+      <div>
+        <a href="#pg2" style="margin-right:100px" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all ui-icon-left" onclick="reset();">No text</a>
+      </div>
+      <div>
+        Items Cart
+      </div>
+
+    </div>
+
+    <span style=" display:block; width:100%; padding: 30px; background-color:#aba6a6; color: white; font-size: 20px;">Snacks</span>
+    <div id="item-list">
+      <!-- Create the shopping cart -->
+      <div class="shopping-cart">
+        <!-- Create the items in the cart -->
+        <div id="item">
+
+        </div>
+      </div>
+
+      <span style=" display:block; width:100%; padding: 30px; background-color:#aba6a6; color: white; font-size: 20px;">Drinks</span>
+      <div id="item-list">
+        <div class="shopping-cart">
+          <!-- Create the items in the cart -->
+
+          <div id="drink">
+
+          </div>
+
+        </div>
+
+        <!-- Display the total cost of the items in the cart -->
+        <div id="total">
+
+        </div>
+      </div>
+      <!-- Create the "Checkout" button -->
+      <button class="checkout-btn" onclick="checkout();">Checkout</button>
+
+    </div>
+  </div>
+<!--Displays the receipt -->
+      <div class="container">
+        <!-- Create the "Checkout" button -->
+        <button class="checkout-btn" type=submit onclick="checkout();">Checkout</button>
+        <div class="popup" id="popup">
+          <div class="recheading">
+            <h2>Vendo-Go</h2>
+            <h5>Address:137, 3 Mountain View Ave, Kingston</h5>
+            <h5>Tele:(876) 554-0472</h5>
+          </div>
+          <hr style="border: 0.5px dotted black;"/>
+          <h2>CASH RECEIPT</h2>
+          <hr style="border: 0.5px dotted black;"/>
+          <div class="info">
+            <label id="account-number-label"></label>
+            <label id="bank-num"></label>
+          </div>
+          <div id="totallb">
+            <label id="popup-total">Total:</label>
+            <label id="banksub"></label>
+            <h4>Thank You for purchasing <i class="ui-tick-icon">✔</i></h4>
+            <a rel='nofollow' href='http://' border='0' style='cursor:default'></a><img src='https://chart.googleapis.com/chart?cht=qr&chl=&chs=180x180&choe=UTF-8&chld=L|2' style="height:50px; width:50px;" alt=''>
+          </div>
+          <button type="button" onclick="closePopup()">Ok</button>
+        </div>
+      </div>
+  
+</body>
+
+</html>

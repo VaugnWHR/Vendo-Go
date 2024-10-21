@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+   <!-- Teara Griffiths and Jude Burey -->
+      <meta charset="utf-8">
+      <title>Feedback | Vendo-Go</title>
+	   <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2514/2514680.png" sizes="16x16">
+	  <link rel="stylesheet" href="css/feedback.css">
+      <link rel="stylesheet" href="css/style.css">
+	  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+      
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	  <script type="text/javascript" >
+		function popup()
+		{alert("Your feedback has been submitted, Thank You for your support!") <!-- alert message that pops up when the customer submits their feedback -->
+		}
+		</script>
+   </head>
+   <body bgcolor="B9B3AF">
+   <div id="pg1" data-role="page">
+   
+      <div class="wrapper">
+         <input type="checkbox" id="btn" hidden>
+         <label for="btn" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         <i class="fas fa-times"></i>
+         </label>
+         <nav id="sidebar">
+            <div class="title">
+              <b> Menu</b>
+            </div>
+            <ul class="list-items">
+             <li><a href="homepage.html"><i class="fas fa-home"></i>Home</a></li>
+               <li><a href="venmach.html"><i class="fas fa-sliders-h"></i>Vending App</a></li>
+               <li><a href="aboutus.html"><i class="fas fa-address-book"></i>About Us</a></li>
+               <li><a href="contactpage.html"><i class="fas fa-envelope"></i>Contact us</a></li>
+               <li><a href="feedback.html"><i class="fas fa-comment"></i></i>Feedback</a></li>
+			   <li><a href="index.html"><i class="fas fa-cog"></i>Sign In</a></li>
+               <li><a href="login.html"><i class="fa-duotone fa-arrow-up-left-from-circle"></i>Logout</a></li>
+               
+               <div class="icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+               </div>
+            </ul>
+         </nav>
+      </div>
+      <div data-role="content">
+	  <div data-role="contentcontainer" class="contentcontainer"><!-- The contentcontainer holds everything for the form which is within the content div -->
+         <div data-role="header" class="header"><!-- the header of the page-->
+           <h1>Vendo-Go Feedback Form</h1>
+		</div>
+<p>Dear Customer,<br>
+Thank you for shopping with Vendo-Go. We really appreciate your support and would appreciate if you could took the timeout to help us make our services better.</p>
+ <br>
+<h5>Please rate your service experience below.</h5> 
+<br><br>         
+<h4>Your Details: </h4>   
+ 
+<br><!-- used to insert single line break -->  
+<label>  <!-- the label tags represents a caption or phrase for an element and in this case the element is the input text boxes-->   
+Name:     <input type="text" name="name" size="30" maxlength="100">    
+</label>    
+<br><br> 
+<label>     
+Email:     <input type="email" name="email" size="30" maxlength="100">    
+</label>    
+<br><br>
+<label>     
+Age:     <input type="number" name="age" size="3" maxlength="3">    
+</label>    
+<br><br>     
+<br>  
+  <h4>  Your Review: </h4> 
+<br><br>  
+<p>     
+<label for="hear-about"> <!-- this is the label for the drop down menu below -->    
+How did you hear about us?     
+</label>     
+<select name="referrer" id="hear-about"> <!-- the select tag represents a control that provides menu options -->     
+<option value="google">Google</option> <!-- the option tags defines the option in the select list and in this case these options shown are for the drop down menu -->     
+<option value="friend">Friend</option>      
+<option value="advert">Advert</option>      
+<option value="other">Other</option>
+</select>
+</p>
+<br><br>
+ Would you refer this application to a friend?    
+<br><br>  
+<label>      
+<input type="radio" name="rating" value="yes" />  <!-- radio button -->    
+Yes     
+</label>     
+<label>      
+<input type="radio" name="rating" value="no" />      
+No     
+</label>     
+<label>      
+<input type="radio" name="rating" value="maybe" />      
+Maybe  
+<br><br>   
+</label>  
+
+</p>    
+<p>     
+<label for="comments">      
+Comments:     
+</label>     
+<br />     
+<textarea rows="4" cols="40" id="comments">     
+</textarea>  <!--  textarea tag represents a multiline plain text edit control in an HTML form. 
+And this referres as the text box/comment box, -->     
+ </p>    
+<label>     
+<input type="checkbox" name="subscribe" checked="checked" />   <!-- checkbox which is used to confirm wether you admit 
+to the terms and coditions asked -->  
+Sign me up for email updates    
+</label>    
+<br><br> 
+<input type="button" onclick="popup()" value="Submit Review"> <!-- submit button for the form --> 
+</form> 
+<br><br><br>
+</div>
+      </div>
+   </body>
+</html>
+
+	

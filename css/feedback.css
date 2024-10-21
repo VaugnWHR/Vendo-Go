@@ -1,0 +1,42 @@
+/* Teara Griffiths and Jude Burey*/
+h4{
+font-family: arial; /* This specifies the font for the header 4 element in the html */
+font-size: 23px; /* This specifies the size of the font*/
+font-weight:bold; /* This is used to specify the boldness of the font */
+color: green; /* This specifies the color of the font  */
+
+}
+h5 {
+background-color:rgb(56,199,233);/* This gives all the header 5 a background color  */
+font-weight:bold;
+font-size:23px;
+}
+label {
+color: black; /* This specifies the color of the labels of the input boxes in the html*/
+font-weight:bold;
+font-size: 20px;  /* This specifies the size of the label for the input boxes */
+}
+.contentcontainer{ /* The contentcontainer holds everything for the form */
+font-family: arial;  
+text-align:center; /* The position of which the text should be aligned or positioned in */
+font-size: 20px;
+}
+
+.contentcontainer .header{ /* This customises the headers for the contentcontainer*/
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+}
+
+
+
+.contentcontainer p{ /* This customises the paragraphs for the contentcontainer*/
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+}
+
